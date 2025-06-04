@@ -52,7 +52,7 @@ jobs:
             - name: Deploy from Docker Hub to Cloud Run
               uses: google-github-actions/deploy-cloudrun@v2
               with:
-                  service: seenit
+                  service: seenit-jessica
                   image: docker.io/${{ secrets.DOCKERHUB_USERNAME }}/seenit-jessica:latest
                   region: ${{ secrets.GCP_REGION }}
                   project_id: ${{ secrets.GCP_PROJECT_ID }}
