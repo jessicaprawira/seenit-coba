@@ -37,7 +37,8 @@ jobs:
             - name: Build & Push image to Docker Hub
               uses: docker/build-push-action@v5
               with:
-                  context: .
+                  context: ./seenit
+                  file: ./seenit/Dockerfile
                   push: true
                   tags: ${{ secrets.DOCKERHUB_USERNAME }}/seenit:latest
                   build-args: |
