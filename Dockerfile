@@ -35,9 +35,6 @@ COPY --from=builder /app/next.config.js .
 COPY --from=builder /app/tsconfig.json .
 COPY --from=builder /app/next-env.d.ts .
 
-# Sebelum CMD
-ENV PORT=8080
-
 # Port default untuk Cloud Run
 EXPOSE 8080
 
